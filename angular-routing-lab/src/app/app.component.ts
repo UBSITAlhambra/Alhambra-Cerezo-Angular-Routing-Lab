@@ -8,7 +8,11 @@ import { ProfileComponent } from './about/profile/profile.component';
 
 @Component({
   selector: 'app-root',
+<<<<<<< HEAD
   imports: [RouterOutlet, HomeComponent, AboutComponent, ContactComponent, ProfileComponent ],
+=======
+  imports: [RouterOutlet, HomeComponent, AboutComponent, ContactComponent, ProfileComponent],
+>>>>>>> 225d4dc (updated components)
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
