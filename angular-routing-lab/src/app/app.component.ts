@@ -10,7 +10,6 @@ import { ProfileComponent } from './about/profile/profile.component';
   selector: 'app-root',
 <<<<<<< HEAD
 <<<<<<< HEAD
-  imports: [RouterOutlet, HomeComponent, AboutComponent, ContactComponent, ProfileComponent ],
 =======
 >>>>>>> 225d4dc (updated components)
 =======
