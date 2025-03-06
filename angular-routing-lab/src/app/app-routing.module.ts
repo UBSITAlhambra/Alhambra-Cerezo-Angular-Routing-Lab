@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';  
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ProfileComponent } from './about/profile/profile.component'; 
+import { ProfileComponent } from './about/profile/profile.component';  
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -11,16 +12,17 @@ const routes: Routes = [
     path: 'about', 
     component: AboutComponent, 
     children: [
-      { path: 'profile', component: ProfileComponent } 
+      { path: 'profile', component: ProfileComponent }
     ]
   },
   { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
+  { path: '', redirectTo: '/home', pathMatch: 'full' },  
   { path: '**', redirectTo: '/home' }  
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],  
+  exports: [RouterModule]  
 })
 export class AppRoutingModule { }

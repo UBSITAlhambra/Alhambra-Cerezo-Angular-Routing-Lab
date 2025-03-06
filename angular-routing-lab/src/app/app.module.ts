@@ -4,8 +4,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ProfileComponent } from './about/profile/profile.component'; 
+import { ProfileComponent } from './about/profile/profile.component';
 import { AppRoutingModule } from './app-routing.module'; 
+import { RouterModule } from '@angular/router';  
 
 @NgModule({
   declarations: [
@@ -13,11 +14,12 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProfileComponent, 
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,  
+    RouterModule,      
   ],
   providers: [],
   bootstrap: [AppComponent]
