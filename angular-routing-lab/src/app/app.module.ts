@@ -5,8 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './about/profile/profile.component';
-import { AppRoutingModule } from './app-routing.module'; 
-import { RouterModule } from '@angular/router';  
+import { AppRoutingModule } from './app-routing.module';  // Import AppRoutingModule
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,  
-    RouterModule,      
+    AppRoutingModule,  // AppRoutingModule should handle routing and includes RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
