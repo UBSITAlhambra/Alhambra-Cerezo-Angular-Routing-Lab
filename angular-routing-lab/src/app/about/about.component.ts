@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ProfileComponent } from './profile/profile.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // ✅ Import RouterModule
 
 @Component({
   selector: 'app-about',
-  imports: [ProfileComponent],
+  standalone: true,  // ✅ Ensure it's standalone
+  imports: [CommonModule, RouterModule], // ✅ Add RouterModule here
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrls: ['./about.component.scss']
 })
-export class AboutComponent {
-
-}
+export class AboutComponent { }

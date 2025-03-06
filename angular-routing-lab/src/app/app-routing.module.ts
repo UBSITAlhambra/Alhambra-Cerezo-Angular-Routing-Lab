@@ -6,8 +6,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './about/profile/profile.component';
 import { AdminGuard } from './admin/admin.guard';
 
-const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },  // Redirect empty path to /home
+export const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent, children: [
     { path: 'profile', component: ProfileComponent }
