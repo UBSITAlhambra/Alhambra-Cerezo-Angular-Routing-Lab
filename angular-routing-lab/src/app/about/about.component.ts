@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; // ✅ Import RouterModule
-
+import { RouterModule } from '@angular/router'; 
 @Component({
   selector: 'app-about',
-  standalone: true,  // ✅ Ensure it's standalone
-  imports: [CommonModule, RouterModule], // ✅ Add RouterModule here
+  standalone: true,  
+  imports: [CommonModule, RouterModule], 
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
