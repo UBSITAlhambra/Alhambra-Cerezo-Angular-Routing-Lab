@@ -16,7 +16,7 @@ import { ChildTwoComponent } from './parent/child-two/child-two.component';
   imports: [
     BrowserModule,
     RouterModule,
-    RouterOutlet
+    RouterOutlet, 
   ],
   providers: [],
   bootstrap: [AppComponent]
