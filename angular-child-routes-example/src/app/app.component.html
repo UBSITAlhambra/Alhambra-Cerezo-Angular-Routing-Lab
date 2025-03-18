@@ -9,4 +9,43 @@
 <a routerLink="/admin" routerLinkActive="active">Admin Section</a> |
 <a routerLink="/admin/dashboard" routerLinkActive="active">Admin Dashboard</a> |
 <a routerLink="/admin/users" routerLinkActive="active">Admin Users</a>
-<router-outlet></router-outlet>
+
+<h1>{{ pageTitle }}</h1>
+<p>Current Time: {{ currentTime | date:'medium'}}</p>
+
+<!-- User Input Form -->
+<div class="container mt-3">
+    <h3>Enter Your Details</h3>
+    <input [(ngModel)]="name" class="form-control form-control-sm w-50 mb-2" placeholder="Name">
+    <input [(ngModel)]="email" class="form-control form-control-sm w-50 mb-2" placeholder="Email">
+    <input [(ngModel)]="number" class="form-control form-control-sm w-50 mb-2" placeholder="Number">
+    <input [(ngModel)]="address" class="form-control form-control-sm w-50 mb-2" placeholder="Address">
+    <input [(ngModel)]="course" class="form-control form-control-sm w-50 mb-2" placeholder="Course">
+  
+    <!-- Button to Open Modal -->
+    <button type="button" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Show My Input
+    </button>
+  </div>
+  
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your Input</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Name:</strong> {{ name }}</p>
+          <p><strong>Email:</strong> {{ email }}</p>
+          <p><strong>Number:</strong> {{ number }}</p>
+          <p><strong>Address:</strong> {{ address }}</p>
+          <p><strong>Course:</strong> {{ course }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
