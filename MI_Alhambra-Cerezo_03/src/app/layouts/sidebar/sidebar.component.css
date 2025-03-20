@@ -1,0 +1,11 @@
+.sidebar-title {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 80px; 
+  }
+
+  .sidebar{ 
+      border-radius: 0px;
+    
+  }
