@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-child-routes-example": {
+    "MI_Alhambra-Cerezo_03": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-child-routes-example",
+            "outputPath": "dist/mi-alhambra-cerezo-03",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,12 +27,9 @@
               }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-
             ],
-            "scripts": [  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-          ],
+            "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -67,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-child-routes-example:build:production"
+              "buildTarget": "MI_Alhambra-Cerezo_03:build:production"
             },
             "development": {
-              "buildTarget": "angular-child-routes-example:build:development"
+              "buildTarget": "MI_Alhambra-Cerezo_03:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,8 +97,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "d515598e-a3c1-4f87-bc9d-f16dd39e6ec3"
   }
 }
