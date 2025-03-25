@@ -11,43 +11,29 @@
 <a routerLink="/admin/users" routerLinkActive="active">Admin Users</a>
 
 <h1>{{ pageTitle }}</h1>
-<p>Current Time: {{ currentTime | date:'medium' }}</p>
+<p>Current Time: {{ currentTime | date:'medium'}}</p>
 
-<div class="container mt-4">
-    <h2>Enter Your Details</h2>
+<!-- User Input Form -->
+<div class="container mt-3">
+    <h3>Enter Your Details</h3>
+    <input [(ngModel)]="name" class="form-control form-control-sm w-50 mb-2" placeholder="Name">
+    <input [(ngModel)]="email" class="form-control form-control-sm w-50 mb-2" placeholder="Email">
+    <input [(ngModel)]="number" class="form-control form-control-sm w-50 mb-2" placeholder="Number">
+    <input [(ngModel)]="address" class="form-control form-control-sm w-50 mb-2" placeholder="Address">
+    <input [(ngModel)]="course" class="form-control form-control-sm w-50 mb-2" placeholder="Course">
   
-    <div class="mb-3">
-      <input [(ngModel)]="name" class="form-control" placeholder="Enter your name">
-    </div>
-  
-    <div class="mb-3">
-      <input [(ngModel)]="email" class="form-control" placeholder="Enter your email">
-    </div>
-  
-    <div class="mb-3">
-      <input [(ngModel)]="number" class="form-control" placeholder="Enter your number">
-    </div>
-  
-    <div class="mb-3">
-      <input [(ngModel)]="address" class="form-control" placeholder="Enter your address">
-    </div>
-  
-    <div class="mb-3">
-      <input [(ngModel)]="course" class="form-control" placeholder="Enter your course">
-    </div>
-  
-    <!-- Button to trigger modal -->
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">
-      Show Details
+    <!-- Button to Open Modal -->
+    <button type="button" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Show My Input
     </button>
   </div>
   
-  <!-- Bootstrap Modal -->
-  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle">Entered Information</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Your Input</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -63,5 +49,3 @@
       </div>
     </div>
   </div>
-  
-<router-outlet></router-outlet>
