@@ -1,4 +1,3 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from'./components/dashboard/dashboard.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
@@ -13,8 +12,5 @@ export const routes: Routes = [
 { path: 'add-product', component: ProductFormComponent },
 { path: 'edit-product/:id', component: ProductFormComponent }
 ];
-@NgModule({
-imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
-})
-export class AppRoutingModule { }
+
+export class AppRoutingModule { } 

@@ -10,6 +10,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
 declarations: [
@@ -26,7 +27,8 @@ imports: [
 BrowserModule,
 routes,
 FormsModule,
-ReactiveFormsModule
+ReactiveFormsModule,
+CommonModule
 ],
 
 providers: [],
