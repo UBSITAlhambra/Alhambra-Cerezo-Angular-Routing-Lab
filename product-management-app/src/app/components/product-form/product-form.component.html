@@ -1,54 +1,56 @@
-<div class="container mt-4">
-  <h2 *ngIf="isEditMode; else addMode" class="text-center">Edit Product</h2>
-  <ng-template #addMode>
-    <h2 class="text-center">Add Product</h2>
-  </ng-template>
-
-  <div class="row justify-content-center">
-    <div class="col-md-6">  <!-- Adjust column width to control form width -->
-      <form (ngSubmit)="onSubmit()" #productForm="ngForm">
-        <div class="mb-3">
-          <label for="name" class="form-label">Product Name</label>
-          <input type="text" id="name" class="form-control" [(ngModel)]="product.name" name="name" required />
-        </div>
-
-        <div class="mb-3">
-          <label for="category" class="form-label">Category</label>
-          <input type="text" id="category" class="form-control" [(ngModel)]="product.category" name="category" required />
-        </div>
-
-        <div class="mb-3">
-          <label for="price" class="form-label">Price</label>
-          <input type="number" id="price" class="form-control" [(ngModel)]="product.price" name="price" required min="0" />
-        </div>
-
-        <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <textarea id="description" class="form-control" [(ngModel)]="product.description" name="description" required></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label for="quantity" class="form-label">Stock Quantity</label>
-          <input type="number" id="quantity" class="form-control" [(ngModel)]="product.quantity" name="quantity" required min="0" />
-        </div>
-
-        <div class="mb-3">
-          <label for="imageUrl" class="form-label">Image URL</label>
-          <input type="text" id="imageUrl" class="form-control" [(ngModel)]="product.imageUrl" name="imageUrl" required />
-        </div>
-
-        <div class="form-check mb-3">
-          <input type="checkbox" id="isAvailable" class="form-check-input" [(ngModel)]="product.isAvailable" name="isAvailable" />
-          <label for="isAvailable" class="form-check-label">Available</label>
-        </div>
-
-        <div class="text-center"> 
-          <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
-            {{ isEditMode ? 'Update Product' : 'Add Product' }}
-          </button>
-          <button type="button" class="btn btn-secondary ms-2" (click)="cancel()">Cancel</button>
-        </div>
-      </form>
+<body class="d-flex flex-column min-vh-100">
+  <div class="container flex-grow-1 mt-4">
+    <h2 *ngIf="isEditMode; else addMode" class="text-center">Edit Product</h2>
+    <ng-template #addMode>
+      <h2 class="text-center">Add Product</h2>
+    </ng-template>
+  
+    <div class="row justify-content-center">
+      <div class="col-md-6">  
+        <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Product Name</label>
+            <input type="text" id="name" class="form-control" [(ngModel)]="product.name" name="name" required />
+          </div>
+  
+          <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" id="category" class="form-control" [(ngModel)]="product.category" name="category" required />
+          </div>
+  
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" id="price" class="form-control" [(ngModel)]="product.price" name="price" required min="0" />
+          </div>
+  
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" class="form-control" [(ngModel)]="product.description" name="description" required rows="3"></textarea>
+          </div>
+  
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Stock Quantity</label>
+            <input type="number" id="quantity" class="form-control" [(ngModel)]="product.quantity" name="quantity" required min="0" />
+          </div>
+  
+          <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image URL</label>
+            <input type="text" id="imageUrl" class="form-control" [(ngModel)]="product.imageUrl" name="imageUrl" required />
+          </div>
+  
+          <div class="form-check mb-3">
+            <input type="checkbox" id="isAvailable" class="form-check-input" [(ngModel)]="product.isAvailable" name="isAvailable" />
+            <label for="isAvailable" class="form-check-label">Available</label>
+          </div>
+  
+          <div class="text-center"> 
+            <button type="submit" class="btn btn-outline-primary" [disabled]="isSubmitting">
+              {{ isEditMode ? 'Update Product' : 'Add Product' }}
+            </button>
+            <button type="button" class="btn btn-outline-secondary ms-2" (click)="cancel()">Cancel</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</body>
