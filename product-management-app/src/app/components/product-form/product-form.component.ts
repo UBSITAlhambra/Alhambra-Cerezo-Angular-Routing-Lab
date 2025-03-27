@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
-import { CommonModule, NgClass, NgForOf, NgIf } from '@angular/common';
+import { CommonModule, NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.css'],
-  imports: [NgClass, NgForOf, NgIf, CommonModule, FormsModule]
+  imports: [NgIf, CommonModule, FormsModule]
 })
 export class ProductFormComponent implements OnInit {
   product: Product = {
